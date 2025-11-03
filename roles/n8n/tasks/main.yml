@@ -1,0 +1,15 @@
+- name: Make sure n8n container is up
+  community.docker.docker_container:
+    name: n8n
+    image: docker.n8n.io/n8nio/n8n:latest
+    state: started
+    restart_policy: unless-stopped
+    ports:
+      - "10500:5678"
+    env:
+      GENERIC_TIMEZONE: "Europe/Berlin"
+      TZ: "Europe/Berlin"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_RUNNERS_ENABLED=true: "true"
+    volumes:
+      - n8n_data:/home/node/.n8n

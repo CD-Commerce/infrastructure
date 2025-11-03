@@ -53,9 +53,13 @@
           - jtl-query.cd-commerce.cloud
           - jtl-ameise.cd-commerce.cloud
           - jtl-api.cd-commerce.cloud
+          - automation.cd-commerce.cloud
 
     - role: jtl_db
       tags: jtl
+
+    - role: n8n
+      tags: n8n
 
     - role: grafana.grafana.alloy
       tags: alloy
