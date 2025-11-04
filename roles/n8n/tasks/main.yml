@@ -11,5 +11,8 @@
       TZ: "Europe/Berlin"
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       N8N_RUNNERS_ENABLED=true: "true"
+      N8N_PROXY_HOPS: "1"
+      N8N_EDITOR_BASE_URL: "https://automation.cd-commerce.cloud/"
+      WEBHOOK_URL: "https://automation.cd-commerce.cloud/"
     volumes:
       - n8n_data:/home/node/.n8n
