@@ -1,0 +1,8 @@
+- name: Deploy action scheduler cron files
+  ansible.builtin.template:
+    src: scheduled_action.j2
+    dest: "/etc/cron.d/{{ item.name }}"
+    owner: root
+    group: root
+    mode: '0644'
+  loop: "{{ action_scheduler_actions }}"
