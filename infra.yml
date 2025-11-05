@@ -127,3 +127,8 @@
             repo: asinsight_automation
             branch: main
             schedule: "0 5 * * 1"
+          - name: amazon_extract_reviews
+            action_filename: extract-reviews.yml
+            repo: amazon-reviews-shopify
+            branch: master
+            schedule: "0 6 * * 1"
