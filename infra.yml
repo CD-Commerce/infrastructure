@@ -126,9 +126,14 @@
             action_filename: "run-automation.yml"
             repo: asinsight_automation
             branch: main
-            schedule: "0 5 * * 1"
+            schedule: "0 5 * * 1" # every monday 5am
           - name: amazon_extract_reviews
             action_filename: extract-reviews.yml
             repo: amazon-reviews-shopify
             branch: master
-            schedule: "0 6 * * 1"
+            schedule: "0 6 * * 1" # every monday 6am
+          - name: amazon_returns_import
+            action_filename: run.yml
+            repo: returns-import
+            branch: master
+            schedule: "0 * * * *" # every hour
